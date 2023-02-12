@@ -87,7 +87,7 @@ local MiscTab = Window:MakeTab({
 DropTab:AddButton({
 	Name = "Auto Drop Ui!",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/esbanuwu/Justo-Update/main/AutoDrop.lua"))()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/ElbolisHub/ElbolisScript/main/AutoDrop.lua"))()
   	end    
 })
 

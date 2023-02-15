@@ -274,7 +274,7 @@ EggsTab:AddDropdown({
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
 	Default = "Common Egg",
-	Options = {"Release Egg[deleted]","Youtuber Egg","Pixle Egg","Anime Egg","Valentine Egg"},
+	Options = {"Release Egg[deleted]","Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg"},
 	Callback = function(Value)
 		_G.selectEgg = Value
     print(_G.selectEgg)
@@ -299,4 +299,4 @@ OrionLib:Init()
 
 --sub to ElbolisMW
 
--- sub to me
+-- sub to me all

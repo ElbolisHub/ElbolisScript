@@ -8,6 +8,8 @@ local Window = OrionLib:MakeWindow({Name = "Elbolis Hub | [🍀x2 LUCKY!🍀] Ta
 _G.autoTap = true
 _G.autoHatch = true
 _G.selectEgg = "Common Egg"
+_G.autoHatch1 = true
+_G.selectEgg1 = "Release Egg"
 _G.autoRebirth = true
 _G.selectRebirth = 1
 _G.autoUpgrade = true
@@ -25,6 +27,26 @@ function autoHatch()
     while _G.autoHatch == true do 
 local args = {
     [1] = _G.selectEgg,
+    [2] = true,
+    [4] = true,
+    [5] = {
+        ["1"] = true,
+        ["4"] = false,
+        ["3"] = true,
+        ["2"] = true
+    }
+}
+
+game:GetService("ReplicatedStorage").Events.OpenEgg:FireServer(unpack(args))
+
+      wait(.1)
+    end
+ end
+
+function autoHatch1()
+    while _G.autoHatch1 == true do 
+local args = {
+    [1] = _G.selectEgg1,
     [2] = true,
     [4] = true,
     [5] = {
@@ -129,6 +151,16 @@ EggsTab:AddToggle({
     autoHatch()
 	end
 })
+
+EggsTab:AddToggle({
+	Name = "Auto Hatch = Exclusives",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHatch1 = Value
+    autoHatch1()
+	end
+})
+
 
 UpgradeTab:AddToggle({
 	Name = "Auto Upgrade",
@@ -273,11 +305,11 @@ EggsTab:AddDropdown({
 
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
-	Default = "Common Egg",
+	Default = "Release Egg",
 	Options = {"Release Egg[deleted]","Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg"},
 	Callback = function(Value)
-		_G.selectEgg = Value
-    print(_G.selectEgg)
+		_G.selectEgg1 = Value
+    print(_G.selectEgg1)
 	end
 })
 
@@ -298,5 +330,3 @@ end
 OrionLib:Init()
 
 --sub to ElbolisMW
-
--- sub to me all

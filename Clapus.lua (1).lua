@@ -9,7 +9,7 @@ _G.autoTap = true
 _G.autoHatch = true
 _G.selectEgg = "Common Egg"
 _G.autoHatch1 = true
-_G.selectEgg1 = "Release Egg"
+_G.selectEgg1 = "Youtuber Egg"
 _G.autoRebirth = true
 _G.selectRebirth = 1
 _G.autoUpgrade = true
@@ -296,7 +296,7 @@ RebirthTab:AddDropdown({
 EggsTab:AddDropdown({
 	Name = "Select Egg",
 	Default = "Common Egg",
-	Options = {"Common Egg", "Aqua Egg", "Inferno Egg","Release Egg","Moon Egg","Space Egg","Astronaut Egg","Water Egg","Ocean Egg","Honey Egg","Galaxy Egg","Digital Egg","Pixel Egg"},
+	Options = {"Common Egg", "Aqua Egg", "Inferno Egg","Release Egg","Moon Egg","Space Egg","Astronaut Egg","Water Egg","Ocean Egg","Honey Egg","Galaxy Egg","Digital Egg","Pixel Egg","Magma Egg","Radioactive Egg"},
 	Callback = function(Value)
 		_G.selectEgg = Value
     print(_G.selectEgg)
@@ -305,8 +305,8 @@ EggsTab:AddDropdown({
 
 EggsTab:AddDropdown({
 	Name = "Select Event Egg",
-	Default = "Release Egg",
-	Options = {"Release Egg[deleted]","Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg"},
+	Default = "Youtuber Egg",
+	Options = {"Youtuber Egg","Pixle Egg","Anime Egg","Hearts Egg","Valentine Egg","Gifts Egg"},
 	Callback = function(Value)
 		_G.selectEgg1 = Value
     print(_G.selectEgg1)
@@ -330,3 +330,4 @@ end
 OrionLib:Init()
 
 --sub to ElbolisMW
+--New Update
